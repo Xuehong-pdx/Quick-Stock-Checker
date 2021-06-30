@@ -1,6 +1,6 @@
 # Quick-Stock-Checker
 
-  A dockerized simple app to check selected stocks.  Results contains information on previous closing value, current opening value, today's high and today's low for each selected stock.
+  A dockerized simple app to check selected stocks.  Results contains information on previous closing value, current opening value, today's high and today's low for each selected stock.  Stocks of interest are entered through standard input.
   
 ## **Built with:**
 
