@@ -29,14 +29,14 @@ def get_stocks(symbols):
             ticker = ticker.upper().strip()
             if check_symbol(ticker) == True:
                 ticker,close_price,open_price,high,low = get_info(ticker)
-                stock_values.append([ticker, close_price,open_price,high,low])
+                stock_values.append([ticker, close_price,open_price,high,low, low-close_price])
         return stock_values
 
     else:
         ticker = symbols.upper().strip()
         if check_symbol(ticker) == True:
             ticker,close_price,open_price,high,low = get_info(symbols)
-            return [[ticker, close_price,open_price,high,low]]
+            return [[ticker, close_price,open_price,high,low, low-close_price]]
 
 if __name__ == '__main__':
     # start_time = time.time()
@@ -46,7 +46,7 @@ if __name__ == '__main__':
     if output is None:
         pass
     else:
-        df = pd.DataFrame(output, columns = ['symbol', 'Previous close', 'Current open', 'high', 'low'])
+        df = pd.DataFrame(output, columns = ['symbol', 'Previous close', 'Current open', 'high', 'low', 'change'])
         print('Please see the info on your stocks below.', '\n')
         print(df)
     # print("--- %s seconds ---" % (time.time() - start_time))
