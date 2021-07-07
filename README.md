@@ -1,6 +1,6 @@
 # Quick-Stock-Checker
 
-  A dockerized simple app to check selected stocks.  Results contains information on previous closing value, current opening value, today's high and today's low for each selected stock.
+  A dockerized simple app to check selected stocks.  Results contains information on previous closing value, current opening value, today's high and today's low for each selected stock.  Stocks of interest are entered through standard input.
   
 ## **Built with:**
 
@@ -10,15 +10,15 @@
 
 ### **Clone repository**
 
-    $ git clone https://github.com/Xuehong-pdx/Quick-Stock-Checker/.git
+    $ git clone https://github.com/Xuehong-pdx/Quick-Stock-Checker
 
 * Navigate to the project folder
 
-      $ cd quick_stock
+      $ cd Quick-Stock-Checker
       
 ### **Docker**
 
-* **Download Docker Desktop:** https://www.docker.com/get-started. There are versions available for Linux, Max, and Windows. **What is Docker?** Docker is a platform for building, running, and shipping applications. Docker packages up an application with everything it needs and allows an app to run and function the same way on any user's local machine.
+* **Download Docker Desktop:** https://www.docker.com/get-started. There are versions available for Linux, Max, and Windows. 
 
 * **Create a Docker ID:** https://hub.docker.com/signup
 
