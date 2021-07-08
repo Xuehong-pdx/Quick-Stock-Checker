@@ -1,6 +1,6 @@
 import yfinance as yf
 import pandas as pd
-import time
+from datetime import datetime
 
 def check_symbol(symbol):
     ticker = yf.Ticker(symbol)
@@ -39,7 +39,7 @@ def get_stocks(symbols):
             return [[ticker, close_price,open_price,high,low, low-close_price]]
 
 if __name__ == '__main__':
-    # start_time = time.time()
+    # start_time = datetime.now()
     stocks = input('Enter your stocks and separate by comma: ')
     print()
     output = get_stocks(stocks)
@@ -48,5 +48,6 @@ if __name__ == '__main__':
     else:
         df = pd.DataFrame(output, columns = ['symbol', 'Previous close', 'Current open', 'high', 'low', 'change'])
         print('Please see the info on your stocks below.', '\n')
+        print(datetime.now())
         print(df)
-    # print("--- %s seconds ---" % (time.time() - start_time))
+    # print("--- %s seconds ---" % (datetime.now() - start_time))
