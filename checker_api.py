@@ -47,7 +47,5 @@ if __name__ == '__main__':
         pass
     else:
         df = pd.DataFrame(output, columns = ['symbol', 'Previous close', 'Current open', 'high', 'low', 'change'])
-        print('Please see the info on your stocks below.', '\n')
-        print(datetime.now())
+        print(f'Current time is {datetime.now()}')
         print(df)
-    # print("--- %s seconds ---" % (datetime.now() - start_time))
