@@ -54,5 +54,5 @@ if __name__ == '__main__':
         else:
             tz = pytz.timezone(time)
         pst_now = datetime.now(tz)
-        print(f'Current time is {datetime.now()}')
+        print(f'Current time is {datetime.now().strftime("%Y-%m-%d %H:%M")}')
         print(df)
