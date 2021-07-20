@@ -50,9 +50,10 @@ if __name__ == '__main__':
     else:
         df = pd.DataFrame(output, columns = ['symbol', 'Previous close', 'Current open', 'high', 'low', 'change'])
         if time == '':
-            tz = pytz.timezone('America/Los_Angeles')
+            tz = 'America/Los_Angeles'
+            tz = pytz.timezone(tz)
         else:
             tz = pytz.timezone(time)
         pst_now = datetime.now(tz)
-        print(f'Current time is {datetime.now().strftime("%Y-%m-%d %H:%M")}')
+        print(f'Current time is {datetime.now().strftime("%Y-%m-%d %H:%M")} {tz}')
         print(df)
